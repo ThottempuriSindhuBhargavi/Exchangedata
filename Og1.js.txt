@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const ajaxcall = {
     ajax(fn, url, key) {
         var xmlhttprqst = new XMLHttpRequest();
@@ -10,3 +11,17 @@ const ajaxcall = {
         xmlhttprqst.send(null);
     }
 }
+=======
+const ajaxcall = {
+    ajax(fn, url, key) {
+        var xmlhttprqst = new XMLHttpRequest();
+        xmlhttprqst.open("GET", url);
+        xmlhttprqst.onreadystatechange = function() {
+            if (xmlhttprqst.readyState == 4 && xmlhttprqst.status == 200) {
+                fn(xmlhttprqst.responseText, key);
+            }
+        }
+        xmlhttprqst.send(null);
+    }
+}
+>>>>>>> 84599e0294326fb18d7b6b28336de1b3c0917823

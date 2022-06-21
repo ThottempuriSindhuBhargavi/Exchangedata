@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var price = 0;
 var total = 0;
 //var cartquantity=0;
@@ -21,4 +22,29 @@ const cartOperations = {
     deleteItem() {
         return this.itemList.splice(0, this.itemList.length);
     }
+=======
+var price = 0;
+var total = 0;
+//var cartquantity=0;
+const cartOperations = {
+    itemList: [],
+    add(currentobject) {
+        this.itemList.push(currentobject);
+    },
+
+    // calcQuantity(quantity){
+    //    return cartquantity=quantity-1;
+    // },
+
+    calcPrice(totalprice) {
+        return price = price + totalprice;
+    },
+    calcCartSubtotal(cartprice) {
+        return total = cartprice + (cartprice * 0.1);
+    },
+
+    deleteItem() {
+        return this.itemList.splice(0, this.itemList.length);
+    }
+>>>>>>> 84599e0294326fb18d7b6b28336de1b3c0917823
 }
